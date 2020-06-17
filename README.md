@@ -1,5 +1,13 @@
 # README
-
+  - Base para comenzar una aplicacion con inicio de sesion.
+    modelo User
+    first_name (string)
+    last_name (string)
+    email (string)
+    password_digest (string)
+    avatar (string)
+    bio (text)
+    
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
