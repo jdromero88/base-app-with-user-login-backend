@@ -4,8 +4,7 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :description
       t.string :image
-      t.decimal9 :price
-      t.decimal2 :price
+      t.decimal :price
       t.boolean :active
 
       t.timestamps
