@@ -3,4 +3,16 @@ class UsersController < ApplicationController
     @users = User.all
     render json: @users
   end
+
+  def create
+    
+  end
+
+  def show
+
+  end
+
+  def update
+
+  end
 end

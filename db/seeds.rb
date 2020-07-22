@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+
+jose = User.create(first_name: 'Jose', last_name: 'Romero',
+  email: 'jdromerov88@gmail.com', password: 'jromero')
+
+jose.avatar.attach(
+  io: File.open('./public/avatars/jr-test.png'),
+  filename: 'jr-test.png',
+  content_type: 'application/png'
+)
