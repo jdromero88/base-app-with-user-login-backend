@@ -9,7 +9,7 @@
 User.destroy_all
 
 jose = User.create(first_name: 'Jose', last_name: 'Romero',
-  email: 'jdromerov88@gmail.com', password: 'jromero')
+  email: 'jdromerov88@gmail.com', password: 'password')
 # to upload our avatar image
 jose.avatar.attach(
   io: File.open('./public/avatars/jr-test.png'),
