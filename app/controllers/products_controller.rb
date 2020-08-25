@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
-    @products = Products.all
-    render json: @products
+    @products = Product.all
+    render json: ProductSerializer.new(@products).to_serialized_json
   end
 
   def create
@@ -17,7 +17,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find_by(name: params[:name])
+    @product = Product.find(params[:id])
+    # @product = Product.find_by(name: params[:name])
     if @product
       render json: ProductSerializer.new(@product).to_serialized_json
     else
@@ -39,7 +40,6 @@ class ProductsController < ApplicationController
         message: 'Product not found.'
       }
     end
-
   end
 
   private

@@ -1,6 +1,6 @@
 # Class for serializing the product data. Doing this will help scalating
 # the app and removing logic from the controller making it easier to read code.
-class UserSerializer
+class ProductSerializer
   def initialize(product_object)
     @product = product_object
   end
