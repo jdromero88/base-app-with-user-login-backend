@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product!(product_strong_params)
+    @product = Product.create!(product_strong_params)
     if @product
       render json: ProductSerializer.new(@product).to_serialized_json
     else
